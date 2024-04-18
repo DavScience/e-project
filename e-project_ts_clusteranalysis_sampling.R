@@ -11,7 +11,7 @@ library(lubridate)
 
 # Load the dataset without headers and specify column names
 column_names <- c('cube_id','Timestamp','Tick','Value','total_order_volume','inverter_production','to_grid','to_community','to_supplier','from_grid', 'from_community','from_supplier', paste0("V", 1:11))
-data <- read.csv("/Users/david/Documents/Studium/WU MBA/Daten e-projekt/data/res202212.csv", sep=";", header=FALSE, col.names=column_names)
+data <- read.csv("/data/res202212.csv", sep=";", header=FALSE, col.names=column_names)
 
 # Parse the timestamp
 data$Timestamp <- ymd_hms(data$Timestamp)
